@@ -8,6 +8,8 @@ import { Component } from '@angular/core';
 import { SignUpComponent } from "./module/sign-in/components/sign-up/sign-up.component";
 import { PasswordComponent } from "./module/sign-in/components/password/password.component";
 import { HomepageComponent } from "./module/dashboard/components/homepage/homepage.component";
+import { AuthenticatedGuard } from "./guards/authenticated.guard";
+
 
 
 // const routes: any = [
@@ -20,23 +22,27 @@ import { HomepageComponent } from "./module/dashboard/components/homepage/homepa
 // export default routes
 
 const routes: Routes = [
-    { path: '', component: SignInComponent, children: [{
-        path: 'signIn', component: SignInComponent
+    {
+        path: '', component: SignInComponent, children: [{
+            path: 'signIn', component: SignInComponent
+        },
+
+        ]
     },
-   
-    ] 
-},
     // { path: 'home', component: NavbarComponent},
-    { path: 'signUp', component: SignUpComponent, children: [
-        {path: 'singIn', component: SignInComponent},
-      
-    ] },
+    {
+        path: 'signUp', component: SignUpComponent, children: [
+            { path: 'singIn', component: SignInComponent },
+
+        ]
+    },
     { path: 'Password', component: PasswordComponent },
-     {
-        path: 'productPage', component: HomepageComponent
+    {
+        path: 'productPage', component: HomepageComponent,
+        canActivate: [AuthenticatedGuard]
     }
-    
-   
+
+
 ];
 
 export default routes

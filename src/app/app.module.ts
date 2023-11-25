@@ -7,10 +7,13 @@ import { SignInComponent } from './module/sign-in/components/signInComponent/sig
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './navbar/navbar.component';
 import { RouterModule } from '@angular/router';
-import  routes from './routes';
+import routes from './routes';
 import { SignInModule } from './module/sign-in/sign-in.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DashboardModule } from './module/dashboard/dashboard.module';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { AuthService } from './module/sign-in/services/auth.service';
+import { AuthenticatedGuard } from './guards/authenticated.guard';
 
 
 
@@ -18,23 +21,24 @@ import { DashboardModule } from './module/dashboard/dashboard.module';
 
 @NgModule({
   declarations: [
-   AppComponent,
+    AppComponent,
 
   ],
-  
+
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(routes),
     SignInModule,
 
-    
-    
+
+
   ],
-  providers: [],
+  providers: [AuthService, HttpClient, AuthenticatedGuard],
   bootstrap: [AppComponent]
 
 })

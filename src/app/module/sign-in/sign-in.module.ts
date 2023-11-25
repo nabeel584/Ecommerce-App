@@ -15,8 +15,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     SignUpComponent,
     SignInComponent,
     PasswordComponent,
-  
-    
+
+
   ],
   imports: [
     CommonModule,
