@@ -1,0 +1,32 @@
+<body class="page">
+        <main class="main page__main">
+                <form class="login-form main__login-form">
+                        <h3 class="login-form__title">Sign Up</h3>
+                        <label class="login-form__label" for="uname">
+                                <span class="sr-only">First Name</span>
+                                <input class="login-form__input" type="text" id="uname" name="uname" value=""
+                                        placeholder="First Name" required="required" [(ngModel)]="firstName" />
+                        </label>
+                        <label class="login-form__label" for="uname"><span class="sr-only">Last Name</span><input
+                                        class="login-form__input" type="text" id="uname" name="uname" value=""
+                                        placeholder="Last Name" required="required" [(ngModel)]="lastName" /></label>
+                        <label class="login-form__label" for="uname"><span class="sr-only">Email</span><input
+                                        class="login-form__input" type="Email" id="uname" name="uname" value=""
+                                        placeholder="Email" required="required" [(ngModel)]="email" /></label>
+                        <label class="login-form__label" for="psw"><span class="sr-only">Password</span><input
+                                        class="login-form__input" type="password" id="psw" name="psw" value=""
+                                        placeholder="Password" required="required" [(ngModel)]="password" /></label>
+                        <label class="login-form__label" for="psw"><span class="sr-only">Confirm Password?</span><input
+                                        class="login-form__input" type="password" id="psw" name="psw" value=""
+                                        placeholder="Confirm Password" required="required"
+                                        [(ngModel)]="confirmPassword" /></label>
+                        <button class="primary-btn" type="submit" (click)="$event.preventDefault(); submit()">Sign
+                                UP</button>
+                        <div class="login-form__footer"><a class="login-form__link"
+                                        (click)="$event.preventDefault(); navigateBackToSingIn()">Forget Password?</a><a
+                                        class="login-form__link" href="#"
+                                        (click)="$event.preventDefault(); navigateToSingIn()">Sign In</a>
+                        </div>
+                </form>
+        </main>
+</body>

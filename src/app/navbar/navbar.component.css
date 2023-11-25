@@ -1,0 +1,98 @@
+/* NAB BAR */
+
+
+.container ul {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.rightnav a i {
+    color: black;
+}
+
+.container ul a {
+    margin: 0px 10px;
+}
+
+.leftnav i {
+    margin: 0px 10px;
+}
+
+.navbar ul li a:hover {
+    color: yellow;
+    transform: scale(1.2);
+    transition: ease 0.5s;
+}
+
+.navbar ul li a {
+    color: rgb(255, 255, 255);
+    margin-left: 20px;
+}
+
+.navbar ul h1 {
+    position: absolute;
+    top: 2%;
+}
+
+.nav-item i {
+    font-size: 40px;
+    display: none;
+}
+
+/* .nav-item a:hover { */
+/* background-color: rgb(175, 208, 11); */
+/* border-radius: 20px; */
+/* } */
+
+.navbar-toggler {
+    color: white;
+    border: none;
+}
+
+.navbar-brand img {
+    height: 60px;
+}
+
+.nav-link:hover {
+    color: yellow;
+}
+
+.cart-link {
+    color: white;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.cart-icon {
+    width: 50px;
+
+}
+
+.cart-text {
+    margin-top: 12px;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.cart-quantity {
+    color: rgb(240, 136, 4);
+    font-size: 16px;
+    font-weight: 700;
+
+    position: absolute;
+    top: 4px;
+    left: 15px;
+
+    width: 26px;
+    text-align: center;
+}
+
+.form-control {
+    height: 0px;
+    width: 400px;
+    position: relative;
+    /* top: 10%; */
+    right: 10%;
+}
